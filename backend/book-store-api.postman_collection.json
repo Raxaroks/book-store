@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "4c154d22-7a09-46ed-a573-8baa124c3c07",
+		"name": "book-store-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15525951"
+	},
+	"item": [
+		{
+			"name": "test route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APPHOST}}/",
+					"host": [
+						"{{APPHOST}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

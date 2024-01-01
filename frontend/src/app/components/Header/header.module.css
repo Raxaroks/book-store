@@ -1,0 +1,22 @@
+
+.header {
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+  padding: 3rem 1.5rem;
+  border-bottom: 3px solid var(--color-dimmed-gray);
+
+  @media only screen and (max-width: 37.5em) {
+    flex-direction: column;
+  }
+}
+
+.headerLogo {
+  width: auto;
+  height: 5rem;
+  margin-left: 2rem;
+}
+
+.headerTitle {
+  margin-left: 2rem;
+}

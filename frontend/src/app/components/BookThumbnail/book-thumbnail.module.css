@@ -1,0 +1,32 @@
+.bookThumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  padding: 2rem;
+  width: 20rem;
+  min-height: 24rem;
+  border-radius: .5rem;
+  border: 1px solid var(--color-dimmed-gray);
+  transition: all .3s;
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 1.4rem;
+}
+
+.bookThumbnail:hover{
+  background-color: #ccc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0rem .3rem .8rem;
+}
+
+.thumbnailImage {
+  width: auto;
+  height: 20rem;
+  margin-bottom: 1rem;
+}
+
+.thumbnailHeading {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,81 @@
+
+:root {
+  /* colors */
+  --color-black: #2c2c2c;
+  --color-dimmed-black: #4e4d4d;
+  --color-dimmed-gray: #e7e7e7;
+  --color-gray-dark: #333;
+  --color-gray-light: #ccc; 
+
+  /* responsive breakpoints */
+  --breakpoint-largest: 75em; 
+  --breakpoint-large: 68.75em;
+  --breakpoint-medium: 56.25em;
+  --breakpoint-small: 37.5em;
+  --breakpoint-smallest: 31.25em;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after { box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+	font-size: 62.5%;
+
+  @media only screen and (max-width: 68.75em) { font-size: 50%; }
+  @media only screen and (max-width: 37.5em) { font-size: 45%; }
+}
+
+body {
+  font-weight: 400;
+	line-height: 1.6;
+  min-height: 100vh;
+  background-image: linear-gradient(
+		to right top,
+		#6d66d9,
+		#7ca5d3
+	);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.app__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100rem;
+  min-height: 80rem;
+  margin: 8rem auto;
+  border-radius: 0.5rem;
+  background: #ffff;
+  overflow: hidden;
+
+  @media only screen and (max-width: 68.75em) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.app__content {
+  display: flex;
+  font-size: 1.6rem;
+
+  @media only screen and (max-width: 37.5em) {
+    flex-direction: column;
+  }
+}
+
+
+.app__section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  min-height: 69rem;
+}

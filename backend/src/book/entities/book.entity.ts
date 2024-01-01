@@ -57,7 +57,7 @@ export class Book extends Document {
   @Prop()
   img?: string;
 
-  @Prop([String])
+  @Prop({ instance: [String], default: [] })
   topics: string[];
 }
 

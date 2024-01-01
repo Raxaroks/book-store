@@ -1,0 +1,88 @@
+.modalBackground {
+	position: fixed;
+	z-index: 10;
+	padding-top: 10rem;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	border: 1px solid #888;
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal {
+	margin: auto;
+	padding: 4rem 6rem;
+	width: 60%;
+	background-color: #fefefe;
+	border-radius: 0.5rem;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.modalHeader button {
+	cursor: pointer;
+	font-weight: 500;
+	padding: 0.4rem 0.8rem;
+	border-radius: .8rem;
+	border: none;
+	font-size: 1.8rem;
+  background-color: #fefefe;
+	color: #717171;
+	transition: all 0.25s ease;
+	align-self: flex-end;
+	margin-top: -0.7rem;
+	margin-right: -0.7rem;
+  transition: all .4s;
+}
+
+.modalHeader button:hover {
+	box-shadow: 0 0.5rem 2rem 0 rgba(#000, 0.04);
+	transform: translate(-0.4rem, 0.4rem);
+}
+
+.modalContent {
+  padding: 0rem 2.5rem;
+}
+
+.modalChildren {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalChildren ul {
+  padding: 1rem;
+  list-style: none;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.modalActions button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem 1.6rem;
+  margin-left: 2rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--color-dimmed-gray);
+  transition: all .3s;
+}
+
+.modalActions button:hover {
+  transform: translateY(-.5rem)
+}
+
+.dangerButton:hover {
+  background-color: red !important;
+  color: white !important;
+}

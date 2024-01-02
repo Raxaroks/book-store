@@ -5,17 +5,19 @@ import { Modal } from '../Modal/Modal';
 import { DeleteBookModal } from '../Modal/DeleteBookModal';
 import { IBook } from '@/types/models/book.interface';
 import { BookService } from '@/app/books/services/book.service';
+import Link from "next/link";
 
 export interface BookActionsProps {
   book: IBook;
 }
-export const BookActions = ({book }: BookActionsProps) => {
+export const BookActions = ({book}: BookActionsProps) => {
 	const [openModal, setOpenModal] = useState(false);
 
 	return (
 		<>
 			<div className={style.bookActions}>
 				{/* <button>Update book</button> */}
+        <Link href={ `/books/${book.id}/update` }>Update book</Link>
 				<button
 					className={style.dangerButton}
 					onClick={() => setOpenModal(true)}>

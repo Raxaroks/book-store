@@ -29,7 +29,8 @@ class HttpService {
         let response = await fetch(url, {
           method,
           headers: this.setupHeaders(hasAttachment, method),
-          cache: 'no-store'
+          ...options,
+          cache: 'no-store',
         });
   
         return response.json();
@@ -38,7 +39,8 @@ class HttpService {
       await fetch(url, {
         method,
         headers: this.setupHeaders(hasAttachment, method),
-        cache: 'no-store'
+      ...options,
+        cache: 'no-store',
       });
       return;
 		} catch (error) {
@@ -62,17 +64,26 @@ class HttpService {
     params?: IService.IParams,
     hasAttachment: boolean = false
   ): Promise<T> {
-    return this.request<T>(HttpMethod.POST, { url, params, options: { body: JSON.stringify(payload) } }, hasAttachment) as T
+    return this.request<T>(HttpMethod.POST, { url, params, options: { body: JSON.stringify(payload) } }, hasAttachment) as T;
   }
 
   // perform PUT request
+  public async put<T, P>(
+    url: string,
+    payload: P,
+    params?: IService.IParams,
+    hasAttachment: boolean = false
+  ): Promise<T> {
+    return this.request<T>(HttpMethod.PUT, { url, params, options: { body: JSON.stringify(payload) } }, hasAttachment) as T;
+  }
+
   // perform DELETE request
   public async delete<T>(
     url:  string,
     params?: IService.IParams,
     hasAttachment: boolean = false
   ): Promise<T> {
-    return this.request<T>(HttpMethod.DELETE, { url, params }) as T;
+    return this.request<T>(HttpMethod.DELETE, { url, params }, hasAttachment) as T;
   }
 }
 

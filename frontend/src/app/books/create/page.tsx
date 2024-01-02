@@ -1,7 +1,8 @@
+import { BookForm } from '@/app/components/BookForm/BookForm'
 
 const createBookPage = () => {
   return (
-    <div>createBookPage</div>
+    <BookForm mode='create' title='Create a new book' />
   )
 }
 

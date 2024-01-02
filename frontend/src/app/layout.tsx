@@ -5,8 +5,10 @@ import { Sidebar } from './components/Sidebar/Sidebar';
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
+import 'react-toastify/dist/ReactToastify.css';
 import 'animate.css';
 import './globals.css';
+import { ToastContainer } from 'react-toastify';
 
 const roboto = Roboto({
 	weight: '400',
@@ -33,7 +35,6 @@ export default function RootLayout({
 
 			<body className={roboto.className}>
 				<div className='app__container'>
-					{/* app header */}
 					<Header />
 
           <main className='app__content'>
@@ -44,6 +45,7 @@ export default function RootLayout({
             </section>
           </main>
 				</div>
+        <ToastContainer />
 			</body>
 		</html>
 	);

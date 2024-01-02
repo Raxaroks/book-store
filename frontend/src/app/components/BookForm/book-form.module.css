@@ -1,0 +1,59 @@
+
+.bookForm {
+  display: flex;
+  flex-direction: column;
+  border-radius: .5rem;
+  background-color: #f1f1f1;
+  padding: 2rem;
+}
+
+.bookForm h2 {
+  margin-bottom: 1.5rem;
+}
+
+.bookForm label:not(:first-child) {
+  margin-top: 1rem
+}
+
+.bookFormInput {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  margin: .8rem 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  transition: all .4s;
+}
+
+.bookFormButton {
+  cursor: pointer;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 1.4rem 2rem;
+  margin: 1rem 0rem;
+  border: none;
+  border-radius: .4rem;
+  transition: all .4s;
+}
+
+.bookFormButton:hover {
+  background-color: #45a049;
+}
+
+.bookFormButtonReset {
+  background-color: #3f3fd5;
+}
+
+.bookFormButtonReset:hover {
+  background-color: #00009b;
+}
+
+.inputError {
+  border: 1px solid #e10202;
+}
+
+.formError {
+  color: #e10202;
+  margin-bottom: .5rem;
+}

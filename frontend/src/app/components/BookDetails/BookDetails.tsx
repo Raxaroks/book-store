@@ -3,7 +3,6 @@ import { toTitleCase } from '@/helpers';
 import Image from 'next/image';
 import NoImg from '../../../../public/images/no-picture.png';
 import style from './book-details.module.css';
-import { IBook } from '@/types/models/book.interface';
 import { BookActions } from '../BookActions/BookActions';
 
 export interface BookDetailsProps {
